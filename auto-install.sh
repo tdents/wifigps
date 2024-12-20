@@ -6,7 +6,8 @@ python3 -m venv /opt/gps-service
 /opt/gps-service/bin/pip install pygnssutils
 
 cat >/etc/systemd/system/gnssserver.service <<'service'
-[Unit]Description=GNSSServer
+[Unit]
+Description=GNSSServer
 [Service]
 Environment=PYTHONUNBUFFERED=1
 User=root
