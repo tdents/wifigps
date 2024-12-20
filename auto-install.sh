@@ -2,7 +2,9 @@
 apt update
 apt upgrade -y
 apt install -y python3-dev python3-venv
-python3 -m venv /opt/gps-service/opt/gps-service/bin/pip install pygnssutils
+python3 -m venv /opt/gps-service
+/opt/gps-service/bin/pip install pygnssutils
+
 cat >/etc/systemd/system/gnssserver.service <<'service'
 [Unit]Description=GNSSServer
 [Service]
